@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{
+        padding:0px;
+        margin:0px;
+    }
+    body {
+    background-image: url("porsche-normal5.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+     .header{
+         width:100%;
+         height: 30%;
+        /* background-color:  #333745;*/
+         /*color:white;*/
+     }
+
+    .navbar{
+        text-align:center;
+    }
+
+    .navbar a{
+        color:black;
+        text-decoration: none;
+        font-size:40px;
+        padding:20px;
+    }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    text-align:center;
+}
+
+input[type=submit] {
+    background-color: #509BAA;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*input[type=submit]:hover {
+    background-color: #45a049;
+}*/
+
+.container {
+    border-radius: 5px;
+    width:40%;
+    height:50%;
+    margin-left: 50px;
+}
+
+ /* Tablets */
+ @media (min-width: 481px) and (max-width: 767px) {
+            #request{
+                margin-left: 0%;
+            }
+            .header {
+                margin-right: 10px;
+                margin-left: 30px;
+            }
+            .navbar {
+                width: 30%;
+            }
+            .container{
+                font-size: 40px;
+            }
+            .container1 {
+                margin-top:10px;
+            }
+            .btn {
+                margin-top:20px;
+                margin-left:25%;
+            }
+        }
+
+         /*Mobile Phone */
+         @media (min-width: 326px) and (max-width: 480px) {
+            .header {
+                width: 250px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .navbar {
+                margin-right: 3%;
+                margin-left:5%;
+            }
+            .container{
+                margin-top:20px;
+            }
+            .container1{
+                font-size: 40px;
+            }
+            .container1 img {
+                margin-top:20px;
+            }
+        }
+
+        /*Mobile Phone with smaller screen size*/
+        @media (min-width: 100px) and (max-width: 325px) {
+            .header {
+                width: 200px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .navbar {
+                margin-right: 5%;
+                margin-left:5%;
+            }
+            .container {
+                margin-top:20px;
+            }
+        }
+
+
+</style>
+</head>
+<body>
+
+        <div class="header">
+                <div class="navbar">
+                <a href="index.html">HOME</a> 
+                <a href="model.html">MODELS</a>
+                <a href="contact.html">CONTACT PAGE</a>
+                <a href="game.html">GAME PAGE</a>
+                   
+        </div>
+    </div>
+
+    
+
+        <div class="container">
+                <form action="/action_page.php">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" id="fname" name="firstname" placeholder="">
+
+                <label for="lname">LAST NAME</label>
+                <input type="text" id="lname" name="lastname" placeholder="">
+
+                <label for="country">COUNTRY</label>
+                <select id="country" name="country">
+                    <option value="ghana">GHANA</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="australia">AUSTRALIA</option>
+                </select>
+
+                <label for="subject">SUBJECT</label>
+                <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+
+               
+            
+                    Enter message: <input type="text" message="fmessage">
+                    <input type="submit" value="Submit" onclick="myFunction()">
+                  </form>
+            </div>
+            <script>
+                        function myFunction() {
+                        alert("The form has been submitted ,will send you a feedback soon.");
+                        redirect();
+                            }
+                            function redirect(){
+                                window.location.href ="index.html";
+
+                            }
+                </script>
+
+            </body>
+            </html>
+
+
+       

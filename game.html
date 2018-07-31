@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Slab" rel="stylesheet">
+    <title>FINAL PROJECT</title>
+</head>
+<style>
+
+     body{
+        background-image: url("j.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        width:100%;
+        height:100%;
+     }
+
+     .navbar{
+        /* border:5px solid grey;*/
+        /* background-color: #333745;*/
+         background-attachment: fixed;
+         text-align:center;
+         font-size: 30px;
+        
+         
+     }
+     .navbar a{
+         display: inline-block;
+         padding:20px;
+          color:black;
+         text-decoration: none;
+     }
+
+      #myGame{
+            text-align:center;
+            border:5px solid #509BAA;
+            position: relative;
+            top: 150px;
+            left:20%;
+            height:55vh;
+            width:50vw;
+        }
+
+        #myGame button{
+            background-color: #509BAA;
+            color:black;
+            border:none;
+            padding:20px 20px;
+            cursor:pointer;
+            width:100%;
+            height:10%;
+        }
+
+        #myGame h2,h4{
+            color:#333745;
+            font-size: 25px;
+        }
+
+        #myGame p{
+            color:white;
+            font-size: 20px;
+        }
+        /* Tablets */
+ @media (min-width: 481px) and (max-width: 767px) {
+            #request{
+                margin-left: 0%;
+            }
+            .navbar {
+                width: 30%;
+            }
+            #myGame{
+                height:50%;
+
+            }
+            #myGame h2,h4,p{
+                font-size: 50px;
+            }
+            }
+        
+
+         /*Mobile Phone */
+         @media (min-width: 326px) and (max-width: 480px) {
+            
+            .navbar {
+                margin-right: 3%;
+                margin-left:5%;
+            }
+            #myGame{
+                font-size: 40px;
+                margin-top:20px;
+                height:50%;
+            }
+         }
+            
+
+        /*Mobile Phone with smaller screen size*/
+        @media (min-width: 100px) and (max-width: 325px) {
+            
+            .navbar {
+                margin-right: 5%;
+                margin-left:5%;
+            }
+            #myGame {
+                margin-top:20px;
+                height:50%;
+            }
+        }
+
+        /*Laptop*/
+        @media (min-width: 1000px) and (max-width: 1440px) {
+            #myGame{
+                height:50%;
+            }
+            #myGame h2,h4{
+                font-size:50px;
+            }
+            #myGame p{
+                font-size: 40px;
+            }
+        }
+
+
+     </style>
+<body>
+    <div class="navbar">
+                <a href="index.html">HOME</a> 
+                <a href="model.html">MODELS</a>
+                <a href="contact.html">CONTACT PAGE</a>
+                <a href="game.html">GAME PAGE</a>
+                   
+        </div>
+
+        <div id="myGame">
+                <h2>HOW OBSESSED ARE YOU WITH CARS</h2>
+                <h4>How To Play</h4>
+                <p>Click on Play</p>
+                <p>You will be asked 20 questions about cars,if you get all 12 questions correct then congratulation.YAY</p>
+                <p>If correct it will display WOW YOU HAD IT</p>
+                <button onclick="guess()">Play!</button>
+                </div>
+
+
+
+                <script>
+                    const quizbox=[
+                        {question:"Who is the first person to invent a car",answer:"Karl Benz"},
+                        {question:"What was the name of the first car invented",answer:"Benz"},
+                        {question:"What is the fastest car in the world",answer:"Hennessey Venom"},
+                        {question:"What is the speed ofthe fatest car",answer:"270MPH"},
+                        {question:"What year was the first car invented",answer:"1885"},
+                        {question:"What is the most expensive Car in the world",answer:"Mercedes-Benz Maybach Exelero"},
+                        {question:"What is the price of the most expensive car",answer:"$8million"},
+                        {question:"How many volts are in a standard car battery",answer:"12 volts"},
+                        {question:"How often should you check your engine oil",answer:"at least once in a month"},
+                        {question:"Who is the inventor of tyre",answer:"Robert William Thompson"},
+                        {question:"Who invented the modern tyre",answer:"John Dunlop"},
+                        {question:"Which year was the first tyre inverted",answer:"1845"},
+                        
+                     ];
+
+                      function guess(){
+                            quizbox.map(
+                         (value,index)=>{
+                        let userGuess=prompt(value.question);
+                            if(userGuess == value.answer){
+                                 alert("Great, correct!!")
+                             }else{
+                                 alert("Oops you're wrong.")
+                             }
+                            
+                        });
+                      }
+
+                    
+                </script>
+</body>
+</html>
